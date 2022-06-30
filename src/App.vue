@@ -2,12 +2,14 @@
   <div id="main">
     <PrimeiroComponente />
     <LifeCycle />
+    <Pessoa />
   </div>
 </template>
 
 <script>
-import PrimeiroComponente from './components/PrimeiroComponente'
-import LifeCycle from './components/LifeCycle'
+import PrimeiroComponente from './components/PrimeiroComponente.vue'
+import LifeCycle from './components/LifeCycle.vue'
+import Pessoa from './components/Pessoa.vue'
 
 
 export default {
@@ -15,10 +17,11 @@ export default {
   components: {
     PrimeiroComponente,
     LifeCycle,
+    Pessoa
   },
   data(){
     return{
-      name: 'nada'
+      
     }
   }
 }
