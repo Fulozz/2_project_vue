@@ -1,13 +1,25 @@
 <template>
-  <PrimeiroComponente />
+  <div id="main">
+    <PrimeiroComponente />
+    <LifeCycle />
+  </div>
 </template>
 
 <script>
 import PrimeiroComponente from './components/PrimeiroComponente'
+import LifeCycle from './components/LifeCycle'
+
+
 export default {
   name: 'App',
   components: {
-    PrimeiroComponente
+    PrimeiroComponente,
+    LifeCycle,
+  },
+  data(){
+    return{
+      name: 'nada'
+    }
   }
 }
 </script>
