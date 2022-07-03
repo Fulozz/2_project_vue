@@ -2,17 +2,20 @@
     <div>
         <p v-if="esta_trabalhando">Estou trabalhando no momento</p>
         <p v-else>Estou em busca de novas oportunidades</p>   
-        <p>Utilizo as seguintes tecnologias</p>
+        <p>Utilizo as seguintes tecnologias para back-end:</p>
         <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>PHP</li>
+            <li v-for="(technology, index) in backend_technologies" v-bind:key="index">{{ technology }}</li>
         </ul>
+        <p>Utilizo as seguintes linguages para Frontend:</p>
+        <ul>
+            <li v-for="technology in frontend_technologies" :key="technology.id">{{ technology.language }}</li>
+        </ul>
+
         <div>
             <button @click="showEmail">{{textoBotao}}</button>
         </div>
         <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
-        <p>Para acessar meu portifólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p>
+        <p class="teste">Para acessar meu portifólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p>
         <Picture />
     </div>
 </template>
@@ -31,7 +34,13 @@ export default {
             mostrar_email: false,
             email: 'thiago.sandrade0720@gmail.com',
             meu_link: 'https://fulozz.github.io/portfolio/',
-            textoBotao: 'Mostrar e-mail'
+            textoBotao: 'Mostrar e-mail',
+            backend_technologies: ['JavaScript', 'PHP', 'Python'],
+            frontend_technologies:[
+                {id: 1, language: 'HTML'},
+                {id: 2, language: 'CSS'},
+                {id: 3, language: 'Vue'}
+            ]
         }
     },
     methods: {
