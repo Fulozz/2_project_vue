@@ -1,6 +1,6 @@
 <template>
   <div id="main">
-    <Header />
+    <Header :esta_logado="false" />
     <PrimeiroComponente />
     <LifeCycle />
     <Pessoa />

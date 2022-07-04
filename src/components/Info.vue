@@ -28,11 +28,13 @@ export default {
     components: {
         Picture
     },
+    props: {
+        email: String,
+        esta_trabalhando: Boolean,
+    },
     data(){
         return{
-            esta_trabalhando: false,
             mostrar_email: false,
-            email: 'thiago.sandrade0720@gmail.com',
             meu_link: 'https://fulozz.github.io/portfolio/',
             textoBotao: 'Mostrar e-mail',
             backend_technologies: ['JavaScript', 'PHP', 'Python'],

@@ -1,7 +1,6 @@
 <template>
     <picture>
     <img :src="avatar" :alt="descricao">
-    <Reutilizacao />
     </picture>
 </template>
 
